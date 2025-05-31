@@ -1,0 +1,170 @@
+:root {
+  --pageWidth: 1000px;
+  --borderDesign: #66e6ac;
+  --faintDesign: #d0f3e3;
+  --designColor: #335d92;
+}
+
+body {
+  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+p {
+  line-height: 1.35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:is(h1, h2, h3).design {
+  border-left: 6px solid;
+  border-left-color: var(--borderDesign);
+  padding-left: 12px;
+}
+
+:is(h1, h2, h3).design.blue {
+  border-left-color: var(--designColor);
+}
+
+:is(h1, h2, h3).no-margin-top {
+  margin-top: 0;
+}
+
+/* Content */
+
+div.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.page > div.content {
+  max-width: var(--pageWidth);
+  width: 100%;
+  padding: 2em;
+  padding-bottom: 0em;
+}
+
+div.page > div.content.bottom {
+  padding-bottom: 2em;
+}
+
+div.page > div.content div.featurette {
+  margin-block: 2em;
+  padding: 1em;
+  border: solid 1px grey;
+}
+
+/* Flex box */
+
+div.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-block: 1em;
+}
+
+div.flex-box > div {
+  flex: 1 250px;
+  padding: 1em;
+  border: 1px solid gray;
+}
+
+div.flex-box.input-test {
+  align-items: center; gap: 0.5em;
+}
+
+div.flex-box.dynamic {
+  background-color: #eee;
+  padding: 1em;
+}
+
+div.flex-box.dynamic > div {
+  display: flex;
+  align-items: center;
+}
+
+div.flex-box.dynamic > div button {
+  margin-left: auto;
+}
+
+/* Button */
+button {
+  padding: 1em;
+  font-family: inherit;
+  font-size: medium;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  background-color: var(--designColor);
+  color: white;
+  margin-block: 0.5em;
+}
+
+button:hover {
+  background-color: black;
+}
+
+button.delete {
+  padding: 0.2em 0.45em; 
+  font-size: large;
+  margin-block: 0em;
+  background-color: grey;
+  border-radius: 100px;
+  opacity: 0.5;
+
+  transition: all 0.125s ease-in-out;
+}
+
+button.delete:hover {
+  background-color: crimson;
+  opacity: 1;
+}
+
+/* Inputs */
+input[type="text"].custom {
+  padding: 1em;
+  border: none;
+  background-color: var(--faintDesign);
+  outline: dashed 2px #335d9255;
+  outline-offset: -2px;
+  font-size: medium;
+  font-family: inherit;
+
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="text"].custom:focus-visible {
+  outline-color: #335d92;
+}
+
+/* Choice Buttons */
+div.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+div.choices > button {
+  padding: 1em;
+  flex: 1 200px;
+  margin-block: 0px;
+  font-size: x-large;
+  background-color: white;
+  color: var(--designColor);
+  border: 2px solid var(--designColor)
+}
+
+div.choices > :is(button:hover, button:focus-visible) {
+  background-color: var(--faintDesign);
+  color: var(--designColor)
+}
+
+div.choices > button.active {
+  background-color: #335d92;
+  color: white
+}

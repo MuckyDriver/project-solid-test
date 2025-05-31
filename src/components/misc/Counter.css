@@ -1,0 +1,18 @@
+button.increment {
+    padding: 1em 2em;
+    border: none;
+    outline: none;
+    background-color: rgb(216, 225, 255);
+    font-family: inherit;
+    font-size: large;
+    color: black;
+
+    cursor: pointer;
+    transition: all 0.125s ease-in-out;
+    margin-right: 1em;
+}
+
+button.increment:hover {
+    background-color: #2c4f7c;
+    color: white;
+}

@@ -1,0 +1,44 @@
+div.image-slideshow {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+div.image-slideshow > button {
+    position: absolute;
+    z-index: 10;
+}
+
+div.image-slideshow > div.images {
+    width: 100%;
+    height: 400px;
+}
+
+div.image-slideshow > div.images > img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.image-slideshow > div.images > img.visible {
+    display: block;
+}
+
+div.image-slideshow > :first-child {
+    left: 0;
+}
+
+div.image-slideshow > :last-child {
+    right: 0;
+}
+
+div.image-slideshow > div.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    background-color: #00000077;
+}
