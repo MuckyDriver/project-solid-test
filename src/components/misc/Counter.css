@@ -8,7 +8,9 @@ button.increment {
     color: black;
 
     cursor: pointer;
-    transition: all 0.125s ease-in-out;
+    transition-property: background-color, color;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-in-out;
     margin-right: 1em;
 }
 

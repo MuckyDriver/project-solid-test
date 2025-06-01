@@ -8,7 +8,6 @@ import FeedbackForm from "~/components/main/FeedbackForm";
 import ContactForm from "~/components/main/ContactForm";
 
 export default function Contact() {
-    const [formChoice, setFormChoice] = createSignal("contact");
     const [activeValue, setActiveValue] = createSignal("contact");
     let buttonContact;
     let buttonFeedback;
@@ -27,7 +26,7 @@ export default function Contact() {
             })
         }
 
-        buttonContact.addEventListener("click", (e) => {
+        buttonContact.addEventListener("click", () => {
             updateButtons(buttonContact)
         })
 

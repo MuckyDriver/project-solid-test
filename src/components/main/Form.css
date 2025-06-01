@@ -33,3 +33,7 @@ form textarea {
     padding: 1em;
     border: none;
 }
+
+form select {
+    background-color: white;
+}
